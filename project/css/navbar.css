@@ -235,7 +235,7 @@ footer>div.container>div.footer>div.part:not(:first-child) div.slide:nth-child(3
     height: 70%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: top;
     align-items: center;
     font-size: 1.1rem;
 }

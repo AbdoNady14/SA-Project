@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./css/navbar.css" />
     <link rel="stylesheet" href="./css/Booking.css" />
   </head>
+
   <body>
     <!-- Nav Bar -->
     <div>
@@ -27,12 +28,8 @@
               <ul>
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./Clinic.html">Clinic</a></li>
-                <li>
-                  <a href="./Booking.html" class="line-page-nav">Booking</a>
-                </li>
-                <li><a href="./About.html">About</a></li>
-                <li><a href="./contact.html">Contact Us</a></li>
-                <li>
+                <li><a href="./Booking.html" class="line-page-nav">Booking</a></li>
+                <li><a href="./contact.html">Contact Us</a></li><li>
                   <i class="fa-solid fa-bars" id="iconNav"></i>
                 </li>
               </ul>
@@ -43,14 +40,9 @@
       <!-- Drop Dawn Div For Nav Bar -->
       <div class="drop-nav" id="navMenu">
         <ul>
-          <li><a href="./Doctors_page.html">Doctors</a></li>
           <li><a href="./Pharmacy.html">Pharmacy</a></li>
           <li><a href="./Lab.html">Lab</a></li>
           <li><a href="./Room-Booking.html">Room Booking</a></li>
-          <li><a href="./Awareness.html">Awareness</a></li>
-          <li><a href="./F.A.Q.html">F.A.Q</a></li>
-          <li><a href="./Achievements.html">Achievements</a></li>
-          <li><a href="./Donations.html">Donations</a></li>
           <li>
             <div id="logIn">
               <a href="./Login.html">Login</a><span> / </span
@@ -62,31 +54,6 @@
           </li>
         </ul>
       </div>
-      <script>
-        let navButton = document.querySelector("#iconNav");
-        let navMenu = document.querySelector("#navMenu");
-        navButton.addEventListener("click", function () {
-          if (navMenu.style.display === "block") {
-            navMenu.style.display = "none";
-          } else {
-            navMenu.style.display = "block";
-          }
-        });
-
-        if (localStorage.getItem("loggedInUser") !== null) {
-          document.getElementById("logIn").style.display = "none";
-          document.getElementById("logOut").style.display = "block";
-        }
-
-        function logout() {
-          document.getElementById("logIn").style.display = "block";
-          document.getElementById("logOut").style.display = "none";
-          localStorage.removeItem("signEmail");
-          localStorage.removeItem("signPassword");
-          localStorage.removeItem("loggedInUser");
-          window.location.href = "index.html";
-        }
-      </script>
     </div>
     <!-- End Nav Bar -->
 
@@ -154,10 +121,18 @@
         cardiology: ["Dr. John Smith", "Dr. Emily Clark", "Dr. Noah Davis"],
         pulmonology: ["Dr. Michael Lee", "Dr. Ava Moore", "Dr. Ryan White"],
         ophthalmology: ["Dr. Laura King", "Dr. Kevin Young", "Dr. Zoe Harris"],
-        otolaryngology: ["Dr. Daniel Scott","Dr. Mia Adams","Dr. Blake Turner"],
+        otolaryngology: [
+          "Dr. Daniel Scott",
+          "Dr. Mia Adams",
+          "Dr. Blake Turner",
+        ],
         hepatology: ["Dr. Sophia Miller", "Dr. Liam Walker", "Dr. Grace Evans"],
         nephrology: ["Dr. James Hall", "Dr. Ella Green", "Dr. Ethan Price"],
-        gastroenterology: ["Dr. Olivia Hill","Dr. Lucas Allen","Dr. Chloe Baker"],
+        gastroenterology: [
+          "Dr. Olivia Hill",
+          "Dr. Lucas Allen",
+          "Dr. Chloe Baker",
+        ],
       };
 
       function updateDoctors() {
@@ -361,5 +336,6 @@
         }
       });
     </script>
+    <script src="navbar.js"></script>
   </body>
 </html>

@@ -8,19 +8,20 @@
   margin-top: 2px;
 }
 
-.containerr {
-  justify-content: center;
-  background-image: url("../Images/MAPhoto2.jpg");
-  background-size: cover;
-  background-position: bottom;
-  background-repeat: no-repeat;
-  width: 95%;
-  height: 100%;
-  /* border: solid 6px var(--background-nav); */
+
+.slide{
+  justify-content: top;
+}
+.room-header {
+  width: 60%;
+  height: 600px;
+  display: block;
+  position: absolute;
+  right: 20px;
+  margin: 20px 20px 0 auto;
   border-radius: 25px;
+  border-bottom: solid 6px var(--background-nav);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.8);
-  padding: 10px;
-  position: relative;
 }
 
 .box {
@@ -88,7 +89,10 @@
 .booking-form {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   gap: 20px;
+  width: 35%;
+  height: 600px;
   background-color: rgba(255, 255, 255, 0.2);
   border: 4px solid var(--background-nav);
   border-radius: 20px;
@@ -101,7 +105,6 @@
 
 .booking-form input,
 .booking-form select {
-  width: calc(50% - 10px);
   padding: 0.5rem 1.5rem;
   border-radius: 10px;
   border: 2px solid var(--background-nav);
@@ -245,6 +248,7 @@
   display: none;
   border-radius: 15px;
 }
+
 
 img.displayslide {
   display: block;

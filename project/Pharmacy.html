@@ -28,7 +28,6 @@
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./Clinic.html">Clinic</a></li>
                 <li><a href="./Booking.html">Booking</a></li>
-                <li><a href="./About.html">About</a></li>
                 <li><a href="./contact.html">Contact Us</a></li>
                 <li>
                   <i class="fa-solid fa-bars" id="iconNav"></i>
@@ -41,14 +40,9 @@
       <!-- Drop Dawn Div For Nav Bar -->
       <div class="drop-nav" id="navMenu">
         <ul>
-          <li><a href="./Doctors_page.html">Doctors</a></li>
-          <li><a href="./Pharmacy.html" class="line-page-nav">Pharmacy</a></li>
+          <li><a href="./Pharmacy.html">Pharmacy</a></li>
           <li><a href="./Lab.html">Lab</a></li>
           <li><a href="./Room-Booking.html">Room Booking</a></li>
-          <li><a href="./Awareness.html">Awareness</a></li>
-          <li><a href="./F.A.Q.html">F.A.Q</a></li>
-          <li><a href="./Achievements.html">Achievements</a></li>
-          <li><a href="./Donations.html">Donations</a></li>
           <li>
             <div id="logIn">
               <a href="./Login.html">Login</a><span> / </span
@@ -60,31 +54,6 @@
           </li>
         </ul>
       </div>
-      <script>
-        let navButton = document.querySelector("#iconNav");
-        let navMenu = document.querySelector("#navMenu");
-        navButton.addEventListener("click", function () {
-          if (navMenu.style.display === "block") {
-            navMenu.style.display = "none";
-          } else {
-            navMenu.style.display = "block";
-          }
-        });
-
-        if (localStorage.getItem("loggedInUser") !== null) {
-          document.getElementById("logIn").style.display = "none";
-          document.getElementById("logOut").style.display = "block";
-        }
-
-        function logout() {
-          document.getElementById("logIn").style.display = "block";
-          document.getElementById("logOut").style.display = "none";
-          localStorage.removeItem("signEmail");
-          localStorage.removeItem("signPassword");
-          localStorage.removeItem("loggedInUser");
-          window.location.href = "index.html";
-        }
-      </script>
     </div>
     <!-- End Nav Bar -->
 
@@ -114,7 +83,6 @@
               </p>
             </div>
             <div class="card-content">
-              <button>Pharmacy</button>
             </div>
           </div>
           <div class="card">
@@ -130,7 +98,6 @@
               </p>
             </div>
             <div class="card-content">
-              <button>Pharmacy</button>
             </div>
           </div>
           <div class="card">
@@ -146,7 +113,6 @@
               </p>
             </div>
             <div class="card-content">
-              <button>Pharmacy</button>
             </div>
           </div>
           <div class="card">
@@ -162,7 +128,6 @@
               </p>
             </div>
             <div class="card-content">
-              <button>Pharmacy</button>
             </div>
           </div>
         </div>
@@ -170,8 +135,6 @@
     </header>
 
     <!-- End Header Medicines -->
-
-    <!-- !Section Medicine Online -->
 
     <section class="section-order">
       <div class="container-1">
@@ -414,5 +377,6 @@
       </div>
     </footer>
     <!-- End Footer -->
+    <script src="navbar.js"></script>
   </body>
 </html>

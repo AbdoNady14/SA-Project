@@ -28,10 +28,7 @@
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./Clinic.html">Clinic</a></li>
                 <li><a href="./Booking.html">Booking</a></li>
-                <li><a href="./About.html">About</a></li>
-                <li>
-                  <a href="./contact.html" class="line-page-nav">Contact Us</a>
-                </li>
+                <li><a href="./contact.html" class="line-page-nav">Contact Us</a></li>
                 <li>
                   <i class="fa-solid fa-bars" id="iconNav"></i>
                 </li>
@@ -43,14 +40,9 @@
       <!-- Drop Dawn Div For Nav Bar -->
       <div class="drop-nav" id="navMenu">
         <ul>
-          <li><a href="./Doctors_page.html">Doctors</a></li>
           <li><a href="./Pharmacy.html">Pharmacy</a></li>
           <li><a href="./Lab.html">Lab</a></li>
           <li><a href="./Room-Booking.html">Room Booking</a></li>
-          <li><a href="./Awareness.html">Awareness</a></li>
-          <li><a href="./F.A.Q.html">F.A.Q</a></li>
-          <li><a href="./Achievements.html">Achievements</a></li>
-          <li><a href="./Donations.html">Donations</a></li>
           <li>
             <div id="logIn">
               <a href="./Login.html">Login</a><span> / </span
@@ -62,31 +54,6 @@
           </li>
         </ul>
       </div>
-      <script>
-        let navButton = document.querySelector("#iconNav");
-        let navMenu = document.querySelector("#navMenu");
-        navButton.addEventListener("click", function () {
-          if (navMenu.style.display === "block") {
-            navMenu.style.display = "none";
-          } else {
-            navMenu.style.display = "block";
-          }
-        });
-
-        if (localStorage.getItem("loggedInUser") !== null) {
-          document.getElementById("logIn").style.display = "none";
-          document.getElementById("logOut").style.display = "block";
-        }
-
-        function logout() {
-          document.getElementById("logIn").style.display = "block";
-          document.getElementById("logOut").style.display = "none";
-          localStorage.removeItem("signEmail");
-          localStorage.removeItem("signPassword");
-          localStorage.removeItem("loggedInUser");
-          window.location.href = "index.html";
-        }
-      </script>
     </div>
     <!-- End Nav Bar -->
 
@@ -137,13 +104,7 @@
               ></textarea>
               <button type="submit" class="submit">Send Message</button>
               <div class="typewriter">
-                Have a question, need assistance,<br />
-                or want to schedule an appointment? We’re always here for
-                you.<br />
-                Reach out to us anytime — our team is ready to support you with
-                care,<br />
-                and quick responses. Your health and comfort are our top
-                priorities!
+                Have a question, need assistance.<br />
               </div>
             </form>
           </div>
@@ -306,11 +267,10 @@
       document.addEventListener("DOMContentLoaded", function () {
         const form = document.querySelector(".contact-form");
         form.addEventListener("submit", function () {
-          alert(
-            "Thank you for contacting us! your message has been sent successfully."
-          );
+          alert("Thank you for contacting us! your message has been sent successfully." );
         });
       });
     </script>
+    <script src="navbar.js"></script>
   </body>
 </html>

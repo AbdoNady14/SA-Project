@@ -28,7 +28,6 @@
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./Clinic.html">Clinic</a></li>
                 <li><a href="./Booking.html">Booking</a></li>
-                <li><a href="./About.html">About</a></li>
                 <li><a href="./contact.html">Contact Us</a></li>
                 <li>
                   <i class="fa-solid fa-bars" id="iconNav"></i>
@@ -41,14 +40,9 @@
       <!-- Drop Dawn Div For Nav Bar -->
       <div class="drop-nav" id="navMenu">
         <ul>
-          <li><a href="./Doctors_page.html">Doctors</a></li>
           <li><a href="./Pharmacy.html">Pharmacy</a></li>
           <li><a href="./Lab.html">Lab</a></li>
           <li><a href="./Room-Booking.html">Room Booking</a></li>
-          <li><a href="./Awareness.html">Awareness</a></li>
-          <li><a href="./F.A.Q.html">F.A.Q</a></li>
-          <li><a href="./Achievements.html">Achievements</a></li>
-          <li><a href="./Donations.html">Donations</a></li>
           <li>
             <div id="logIn">
               <a href="./Login.html" class="line-page-nav">Login</a
@@ -60,31 +54,6 @@
           </li>
         </ul>
       </div>
-      <script>
-        let navButton = document.querySelector("#iconNav");
-        let navMenu = document.querySelector("#navMenu");
-        navButton.addEventListener("click", function () {
-          if (navMenu.style.display === "block") {
-            navMenu.style.display = "none";
-          } else {
-            navMenu.style.display = "block";
-          }
-        });
-
-        if (localStorage.getItem("loggedInUser") !== null) {
-          document.getElementById("logIn").style.display = "none";
-          document.getElementById("logOut").style.display = "block";
-        }
-
-        function logout() {
-          document.getElementById("logIn").style.display = "block";
-          document.getElementById("logOut").style.display = "none";
-          localStorage.removeItem("signEmail");
-          localStorage.removeItem("signPassword");
-          localStorage.removeItem("loggedInUser");
-          window.location.href = "index.html";
-        }
-      </script>
     </div>
     <!-- End Nav Bar -->
 
@@ -133,159 +102,6 @@
 
     <!-- End Sign In Section -->
 
-    <!-- Footer -->
-
-    <!-- <footer>
-      <div class="container">
-        <div class="footer">
-          <div class="part">
-            <div class="slide">
-              <img src="./Images/Logo_Hospital.jpeg" alt="" />
-              <h2>MENG Hospital</h2>
-            </div>
-            <div class="line"></div>
-            <div class="slide">
-              <p>
-                MENG Hospital is dedicated to providing exceptional healthcare
-                services with a focus on patient well-being and advanced medical
-                practices.
-              </p>
-            </div>
-            <div class="slide">
-              <p>
-                <i class="fa-solid fa-location-dot"></i> Nile Corniche, Al Eini,
-                El Sayeda Zeinab, Cairo Governorate
-              </p>
-            </div>
-          </div>
-          <div class="part">
-            <div class="slide">
-              <h3><i class="fa-solid fa-location-pin"></i> Useful Links</h3>
-            </div>
-            <div class="line"></div>
-            <div class="slide">
-              <ul>
-                <li>
-                  <i class="fa-solid fa-circle-chevron-right"></i>
-                  <a href="./About.html"> About Us</a>
-                </li>
-                <li>
-                  <i class="fa-solid fa-circle-chevron-right"></i>
-                  <a href="./index.html"> Our Services</a>
-                </li>
-                <li>
-                  <i class="fa-solid fa-circle-chevron-right"></i>
-                  <a href="./Pharmacy.html"> Pharmacy</a>
-                </li>
-                <li>
-                  <i class="fa-solid fa-circle-chevron-right"></i>
-                  <a href="./Doctors_page.html"> Find a Doctor</a>
-                </li>
-                <li>
-                  <i class="fa-solid fa-circle-chevron-right"></i>
-                  <a href="./Awareness.html"> Awareness</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="part">
-            <div class="slide">
-              <h3>
-                <i class="fa-solid fa-briefcase-medical"></i> Our Services
-              </h3>
-            </div>
-            <div class="line"></div>
-            <div class="slide">
-              <ul>
-                <li>
-                  <i class="fa-solid fa-circle-chevron-right"></i>
-                  <a href="./Lab.html"> Lab</a>
-                </li>
-                <li>
-                  <i class="fa-solid fa-circle-chevron-right"></i>
-                  <a href="./Booking.html"> Booking</a>
-                </li>
-                <li>
-                  <i class="fa-solid fa-circle-chevron-right"></i>
-                  <a href="./Achievements.html"> Achievements </a>
-                </li>
-                <li>
-                  <i class="fa-solid fa-circle-chevron-right"></i>
-                  <a href="./Clinic.html"> Clinic</a>
-                </li>
-                <li>
-                  <i class="fa-solid fa-circle-chevron-right"></i>
-                  <a href="./About.html"> About Us</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="part">
-            <div class="slide">
-              <h3><i class="fa-solid fa-circle-info"></i> Support</h3>
-            </div>
-            <div class="line"></div>
-            <div class="slide">
-              <ul>
-                <li>
-                  <i class="fa-solid fa-circle-chevron-right"></i>
-                  <a href="./F.A.Q.html"> F.A.Q</a>
-                </li>
-                <li>
-                  <i class="fa-solid fa-circle-chevron-right"></i>
-                  <a href="./Awareness.html"> Awareness</a>
-                </li>
-                <li>
-                  <i class="fa-solid fa-circle-chevron-right"></i>
-                  <a href="./Doctors_page.html"> Find Doctor </a>
-                </li>
-                <li>
-                  <i class="fa-solid fa-circle-chevron-right"></i>
-                  <a href="./Room-Booking.html"> Room Booking</a>
-                </li>
-                <li>
-                  <i class="fa-solid fa-circle-chevron-right"></i>
-                  <a href="./contact.html"> Contact Us</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="part">
-            <div class="slide">
-              <h3>Contact Details</h3>
-            </div>
-            <div class="line"></div>
-            <div class="slide">
-              <ul class="social-links">
-                <li>
-                  <a href="https://web.telegram.org/k/#@MedoAyman200"
-                    ><i class="fa-brands fa-telegram"></i> MedoAyman200</a
-                  >
-                </li>
-                <li>
-                  <a href="https://instagram.com/mhmdayman515"
-                    ><i class="fa-brands fa-instagram"></i> mhmdayman515</a
-                  >
-                </li>
-                <li>
-                  <a href="https://wa.me/qr/OZJSQ4A6AYJOO1"
-                    ><i class="fa-brands fa-whatsapp"></i> (+20) 1040424647</a
-                  >
-                </li>
-                <li>
-                  <i class="fa-solid fa-envelope"></i>
-                  Medoscar100@gmail.com
-                </li>
-                <li><i class="fa-solid fa-phone"></i> Call: +20 1040424647</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer> -->
-
-    <!-- End Footer -->
-
     <script>
       // Login Form
       const SignInForm = document.getElementById("loginForm");
@@ -311,5 +127,6 @@
         }
       });
     </script>
+    <script src="navbar.js"></script>
   </body>
 </html>

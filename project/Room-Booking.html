@@ -29,7 +29,6 @@
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./Clinic.html">Clinic</a></li>
                 <li><a href="./Booking.html">Booking</a></li>
-                <li><a href="./About.html">About</a></li>
                 <li><a href="./contact.html">Contact Us</a></li>
                 <li>
                   <i class="fa-solid fa-bars" id="iconNav"></i>
@@ -42,14 +41,9 @@
       <!-- Drop Dawn Div For Nav Bar -->
       <div class="drop-nav" id="navMenu">
         <ul>
-          <li><a href="./Doctors_page.html">Doctors</a></li>
           <li><a href="./Pharmacy.html">Pharmacy</a></li>
           <li><a href="./Lab.html">Lab</a></li>
-          <li><a href="./Room-Booking.html" class="line-page-nav">Room Booking</a></li>
-          <li><a href="./Awareness.html">Awareness</a></li>
-          <li><a href="./F.A.Q.html">F.A.Q</a></li>
-          <li><a href="./Achievements.html">Achievements</a></li>
-          <li><a href="./Donations.html">Donations</a></li>
+          <li><a href="./Room-Booking.html">Room Booking</a></li>
           <li>
             <div id="logIn">
               <a href="./Login.html">Login</a><span> / </span><a href="./signup.html">Sign Up</a>
@@ -58,56 +52,19 @@
           </li>
         </ul>
       </div>
-      <script>
-        let navButton = document.querySelector("#iconNav");
-        let navMenu = document.querySelector("#navMenu");
-        navButton.addEventListener("click", function () {
-          if (navMenu.style.display === "block") {
-            navMenu.style.display = "none";
-          } else {
-            navMenu.style.display = "block";
-          }
-        });
-
-        if (localStorage.getItem("loggedInUser") !== null) {
-          document.getElementById("logIn").style.display = "none";
-          document.getElementById("logOut").style.display = "block";
-        }
-
-        function logout() {
-          document.getElementById("logIn").style.display = "block";
-          document.getElementById("logOut").style.display = "none";
-          localStorage.removeItem("signEmail");
-          localStorage.removeItem("signPassword");
-          localStorage.removeItem("loggedInUser");
-          window.location.href = "index.html";
-        }
-      </script>
     </div>
     <!-- End Nav Bar -->
 
     <!-- Header RoomBooking -->
-    <div class="page1">
-    <div class="containerr">
-        <div class="box">
-         <div class="text typewriter">
-      <h1> Book your room </h1>
-      <h2>Welcome to MENG Hospital rooms.</h2>
-      <div class="button-group">
-      <button type="button" class="submit" onclick="showForm()">Book now</button>
-      <span class="or-text">or</span>
-      <a href="#Page2" class="submit secondary">Know more</a>
-
-    </div>
-    </div>
- <div class="booking-container hidden" id="bookingForm">
+<img src="Images/MAPhoto2.jpg" class="room-header">
+ <div class="booking-container" id="bookingForm">
   <div class="form-wrapper">
     <div class="form-card">
       <form class="booking-form">
-        <input type="text" placeholder="Full Name" required />
-        <input type="text" placeholder="Your phone" required />
+        <input type="text" placeholder="Full Name" class="formB" required />
+        <input type="text" placeholder="Your phone" class="formB" required />
 
-        <select id="specialty" required>
+        <select id="specialty" class="formB" required>
           <option disabled selected>Room type</option>
           <option>Standard</option>
           <option>Private</option>
@@ -115,8 +72,8 @@
           <option>(ICU)</option>
         </select>
 
-        <select id="many-days" required>
-          <option disabled selected>many day</option>
+        <select id="many-days" class="formB" required>
+          <option disabled selected>how many day</option>
           <option>1 day</option>
           <option>2 days</option>
           <option>3 Days</option>
@@ -125,7 +82,7 @@
           <option>More</option>
         </select>
 
-        <select id="day" required>
+        <select id="day" class="formB" required>
           <option disabled selected>first Day</option>
           <option>Saturday</option>
           <option>Sunday</option>
@@ -135,12 +92,11 @@
           <option>Thursday</option>
         </select>
 
-        <button type="submit" class="submit1">End</button>
+        <button type="submit" class="submit1">Submit</button>
       </form>
     </div>
   </div>
 </div>
-     </div>
     </div>
 
   </div>
@@ -208,13 +164,6 @@
 
 </div>
 
-<script>
-  function showForm() 
-  {
-    const form = document.getElementById("bookingForm");
-    form.classList.toggle("hidden");
-  }
-</script>
 
 <script>
   const slides = document.querySelectorAll(".slides img");
@@ -284,10 +233,6 @@
               <ul>
                 <li>
                   <i class="fa-solid fa-circle-chevron-right"></i>
-                  <a href="./About.html"> About Us</a>
-                </li>
-                <li>
-                  <i class="fa-solid fa-circle-chevron-right"></i>
                   <a href="./index.html"> Our Services</a>
                 </li>
                 <li>
@@ -296,11 +241,7 @@
                 </li>
                 <li>
                   <i class="fa-solid fa-circle-chevron-right"></i>
-                  <a href="./Doctors_page.html"> Find a Doctor</a>
-                </li>
-                <li>
-                  <i class="fa-solid fa-circle-chevron-right"></i>
-                  <a href="./Awareness.html"> Awareness</a>
+                  <a href="./Lab.html"> Lab</a>
                 </li>
               </ul>
             </div>
@@ -324,15 +265,7 @@
                 </li>
                 <li>
                   <i class="fa-solid fa-circle-chevron-right"></i>
-                  <a href="./Achievements.html"> Achievements </a>
-                </li>
-                <li>
-                  <i class="fa-solid fa-circle-chevron-right"></i>
                   <a href="./Clinic.html"> Clinic</a>
-                </li>
-                <li>
-                  <i class="fa-solid fa-circle-chevron-right"></i>
-                  <a href="./About.html"> About Us</a>
                 </li>
               </ul>
             </div>
@@ -346,23 +279,15 @@
               <ul>
                 <li>
                   <i class="fa-solid fa-circle-chevron-right"></i>
-                  <a href="./F.A.Q.html"> F.A.Q</a>
-                </li>
-                <li>
-                  <i class="fa-solid fa-circle-chevron-right"></i>
-                  <a href="./Awareness.html"> Awareness</a>
-                </li>
-                <li>
-                  <i class="fa-solid fa-circle-chevron-right"></i>
-                  <a href="./Doctors_page.html"> Find Doctor </a>
-                </li>
-                <li>
-                  <i class="fa-solid fa-circle-chevron-right"></i>
                   <a href="./Room-Booking.html"> Room Booking</a>
                 </li>
                 <li>
                   <i class="fa-solid fa-circle-chevron-right"></i>
                   <a href="./contact.html"> Contact Us</a>
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-chevron-right"></i>
+                  <a href="./Booking.html"> Booking</a>
                 </li>
               </ul>
             </div>
@@ -376,12 +301,12 @@
               <ul class="social-links">
                 <li>
                   <a href="https://web.telegram.org/k/#@MedoAyman200"
-                    ><i class="fa-brands fa-telegram"></i> MedoAyman200</a
+                    ><i class="fa-brands fa-telegram"></i> AbdoNady</a
                   >
                 </li>
                 <li>
                   <a href="https://instagram.com/mhmdayman515"
-                    ><i class="fa-brands fa-instagram"></i> mhmdayman515</a
+                    ><i class="fa-brands fa-instagram"></i> AbdoNady</a
                   >
                 </li>
                 <li>
@@ -391,7 +316,7 @@
                 </li>
                 <li>
                   <i class="fa-solid fa-envelope"></i>
-                  Medoscar100@gmail.com
+                 abdonady0@gmail.com
                 </li>
                 <li><i class="fa-solid fa-phone"></i> Call: +20 1040424647</li>
               </ul>
@@ -401,6 +326,6 @@
       </div>
     </footer>
     <!-- End Footer -->
-    
+    <script src="navbar.js"></script>
  </body>
 </html>    
