@@ -334,7 +334,6 @@
       form.addEventListener("submit", function (event) {
         if (localStorage.getItem("loggedInUser") !== null) {
           event.preventDefault();
-          // Varible the form
           const fullName = form.querySelectorAll('input[type="text"]')[0].value;
           const phoneNumber =
             form.querySelectorAll('input[type="text"]')[1].value;
