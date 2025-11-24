@@ -21,6 +21,13 @@
   position: relative;
 }
 
+.drop-nav {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: -1;
+}
+
 .walls {
   height: 87.5vh;
   width: 100%;
