@@ -62,8 +62,8 @@
         <h2 class="form-title">Book Your Appointment</h2>
         <div class="form-card">
           <form class="booking-form" id="bookingForm">
-            <input type="text" placeholder="Full Name" />
-            <input type="text" placeholder="Your Number" />
+            <input type="text" placeholder="Full Name" minlength="8" maxlength="30" />
+            <input type="text" placeholder="Your Number" minlength="11" maxlength="11"/>
             <select id="specialty" required onchange="updateDoctors()">
               <option disabled selected>Select Specialty</option>
               <option value="neurology">Neurology</option>
